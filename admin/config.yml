@@ -1,0 +1,53 @@
+backend:
+  name: github
+  repo: OWNER/REPO          # ← 部署後改成你的 GitHub 帳號/儲存庫，例如 advforge/advforge-site
+  branch: main
+  # base_url: https://sveltia-cms-auth.你的子網域.workers.dev
+  # ↑ 第三階段（給宜德同事「用 GitHub 登入」）時才把上面這行的 # 拿掉並填入 Worker 網址。
+  #   自己用 PAT（個人存取權杖）測試時，先不用管這行。
+
+media_folder: images        # 上傳的圖片會存進 repo 的 images/ 資料夾
+public_folder: /images
+
+locale: zh-Hant
+
+collections:
+  - name: site
+    label: 網站內容
+    files:
+      - name: home
+        label: 首頁與聯絡資訊
+        file: content/site.json
+        fields:
+          - name: hero
+            label: 首頁主視覺
+            widget: object
+            fields:
+              - { name: eyebrow, label: 上方小標, widget: string }
+              - { name: title_line1, label: 標題第一行, widget: string }
+              - { name: title_line2, label: 標題第二行, widget: string }
+              - { name: en, label: 英文公司名, widget: string }
+              - { name: lede, label: 開場介紹, widget: text }
+              - name: tagline
+                label: 標語（三個）
+                widget: list
+                field: { name: item, label: 標語, widget: string }
+          - name: about
+            label: 關於宜德
+            widget: object
+            fields:
+              - { name: heading, label: 區塊標題, widget: string }
+              - { name: p1, label: 段落一, widget: text }
+              - { name: p2, label: 段落二, widget: text }
+              - { name: exec_quote, label: 總經理引言, widget: text }
+              - { name: exec_name, label: 署名, widget: string }
+          - name: contact
+            label: 聯絡資訊
+            widget: object
+            fields:
+              - { name: company, label: 公司名稱, widget: string }
+              - { name: phone, label: 電話, widget: string }
+              - { name: fax, label: 傳真, widget: string }
+              - { name: email, label: Email, widget: string }
+              - { name: taxid, label: 統一編號, widget: string }
+              - { name: address, label: 地址, widget: string }
