@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: OWNER/REPO          # ← 部署後改成你的 GitHub 帳號/儲存庫，例如 advforge/advforge-site
+  repo: eric880212/advforge-site          # ← 部署後改成你的 GitHub 帳號/儲存庫，例如 advforge/advforge-site
   branch: main
   # base_url: https://sveltia-cms-auth.你的子網域.workers.dev
   # ↑ 第三階段（給宜德同事「用 GitHub 登入」）時才把上面這行的 # 拿掉並填入 Worker 網址。
