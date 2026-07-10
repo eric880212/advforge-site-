@@ -1,11 +1,15 @@
 {
   "hero": {
     "eyebrow": "Magnesium Alloy Forging · Est. 2023",
-    "title_line1": "鎂合金鍛造",
+    "title_line1": "鎂合金鍛造RRRR",
     "title_line2": "與 CNC 精密加工",
     "en": "ADVFORGE CO., LTD.",
     "lede": "整合輕合金鍛造與 CNC 加工技術，從研發設計、模擬、開發到製造加工，一條龍製程服務，為醫療、航太、汽車產業打造輕量化、高強度的金屬零件。",
-    "tagline": ["成就自己", "利益眾生", "共創雙贏"]
+    "tagline": [
+      "成就自己",
+      "利益眾生",
+      "共創雙贏"
+    ]
   },
   "about": {
     "heading": "成就自己，利益眾生，共創雙贏",
