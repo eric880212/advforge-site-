@@ -3,489 +3,568 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>宜德股份有限公司 ADVFORGE｜鎂合金鍛造 · CNC 精密加工</title>
-<meta name="description" content="宜德股份有限公司 ADVFORGE — 專注鎂合金、鎂鋰合金、鋁合金鍛造及 CNC 精密加工，為醫療、航太、汽車產業打造輕量化、高強度金屬零件。">
+<title>宜德股份有限公司 ADVFORGE CO.,LTD</title>
+<meta name="description" content="宜德股份有限公司 ADVFORGE — 鎂合金、鎂鋰合金、鋁合金鍛造及 CNC 精密加工，服務醫療、航太、汽機車產業。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#15181B;
-  --ink-soft:#2A2F34;
-  --paper:#F4F5F3;
-  --panel:#FFFFFF;
-  --steel:#5B6770;
-  --mist:#E3E6E4;
-  --line:#D2D6D3;
-  --ember:#C24625;
-  --ember-deep:#9B3818;
-  --spec:#2F5D6E;
-  --mg:#B9C0C4;
-  --font-disp:"Space Grotesk",sans-serif;
-  --font-mono:"IBM Plex Mono",monospace;
-  --font-body:"Noto Sans TC","Space Grotesk",sans-serif;
+  --navy:#1F2A56;
+  --navy-deep:#161E3D;
+  --maroon:#7B3B41;
+  --maroon-dark:#653036;
+  --ink:#2A2A2A;
+  --grey-bg:#D8D8D8;
+  --light:#F2F2F2;
+  --line:#DDD;
+  --white:#fff;
+  --f:"Noto Sans TC",sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{
-  font-family:var(--font-body);
-  color:var(--ink);
-  background:var(--paper);
-  line-height:1.75;
-  font-weight:400;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-h1,h2,h3{line-height:1.25;font-weight:500}
-a{color:inherit;text-decoration:none}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{font-family:var(--f);color:var(--ink);background:#fff;line-height:1.9;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
 
-.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-.eyebrow{
-  font-family:var(--font-mono);
-  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--spec);display:inline-flex;align-items:center;gap:10px;
-}
-.eyebrow::before{content:"";width:26px;height:1px;background:var(--ember)}
+/* 佔位圖框 */
+.ph{background:repeating-linear-gradient(135deg,#e9e9e9 0 2px,#f6f6f6 2px 12px);
+  display:flex;align-items:center;justify-content:center;color:#999;font-size:13px;text-align:center;padding:12px;border:1px solid #e2e2e2}
 
-/* ---------- nav ---------- */
-header{
-  position:sticky;top:0;z-index:60;
-  background:rgba(244,245,243,.86);backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
-}
-.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand .mgmark{
-  width:38px;height:38px;border:1.5px solid var(--ink);
-  display:flex;flex-direction:column;justify-content:center;align-items:center;
-  font-family:var(--font-mono);line-height:1;position:relative;
-}
-.brand .mgmark b{font-size:16px;font-weight:500}
-.brand .mgmark span{font-size:7px;position:absolute;top:3px;left:4px;color:var(--steel)}
-.brand .mgmark i{font-size:6px;position:absolute;bottom:3px;right:4px;font-style:normal;color:var(--steel)}
-.brand .name{font-family:var(--font-disp);font-weight:700;letter-spacing:.14em;font-size:16px}
-.brand .name em{display:block;font-family:var(--font-body);font-weight:400;font-style:normal;font-size:11px;letter-spacing:.02em;color:var(--steel);margin-top:1px}
-.menu{display:flex;gap:30px;align-items:center}
-.menu a{font-size:14px;color:var(--ink-soft);position:relative;padding:4px 0;transition:color .2s}
-.menu a:hover{color:var(--ember)}
-.menu a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--ember);transition:width .25s}
-.menu a:hover::after{width:100%}
-.navcta{font-family:var(--font-mono);font-size:13px;border:1px solid var(--ink);padding:8px 16px;letter-spacing:.04em;transition:all .2s}
-.navcta:hover{background:var(--ink);color:var(--paper)}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
-.burger span{width:22px;height:2px;background:var(--ink);transition:.3s}
+/* ===== HEADER ===== */
+header{position:sticky;top:0;z-index:80;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:96px}
+.logo{display:flex;align-items:center;gap:14px;flex:none}
+.logo .mark{width:56px;height:56px;flex:none}
+.logo .mark svg{width:100%;height:100%}
+.logo .txt b{display:block;font-size:20px;font-weight:700;letter-spacing:.06em;color:#1a1a1a;line-height:1.3}
+.logo .txt small{display:block;font-size:12px;font-weight:700;letter-spacing:.05em;color:#444}
+.menubox{display:flex;align-items:center;border:1px solid #ddd;padding:6px;flex:1;justify-content:center;max-width:830px;overflow:hidden}
+.menubox a{padding:12px 16px;font-size:15px;color:#333;white-space:nowrap;transition:.2s}
+.menubox a:hover{color:var(--maroon)}
+.menubox a.on{background:var(--maroon);color:#fff}
+.menubox .more{color:#5b7fc7;padding:0 10px;font-size:18px}
+.cta{background:var(--maroon);color:#fff;padding:13px 26px;font-size:15px;flex:none;transition:.2s}
+.cta:hover{background:var(--maroon-dark)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:#333}
 
-/* ---------- hero ---------- */
-.hero{position:relative;padding:96px 0 88px;border-bottom:1px solid var(--line);overflow:hidden}
-.hero .ghost{
-  position:absolute;right:-40px;top:50%;transform:translateY(-50%);
-  font-family:var(--font-mono);font-size:clamp(140px,26vw,380px);font-weight:500;
-  color:var(--mist);z-index:0;line-height:.8;user-select:none;letter-spacing:-.04em;
-}
-.hero .inner{position:relative;z-index:2;max-width:760px}
-.hero h1{font-size:clamp(34px,5.2vw,60px);font-weight:700;letter-spacing:.01em;margin:26px 0 0}
-.hero h1 .en{display:block;font-family:var(--font-disp);font-weight:500;font-size:clamp(15px,2vw,20px);letter-spacing:.28em;color:var(--steel);margin-top:16px}
-.hero .lede{font-size:17px;color:var(--ink-soft);max-width:600px;margin:28px 0 0;font-weight:300}
-.hero .tagline{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:34px;font-family:var(--font-mono);font-size:13px;letter-spacing:.05em;color:var(--spec)}
-.hero .tagline span{position:relative;padding-left:16px}
-.hero .tagline span::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--ember)}
-.hero .actions{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap}
-.btn{font-family:var(--font-body);font-size:15px;font-weight:500;padding:13px 26px;border:1px solid var(--ink);display:inline-flex;align-items:center;gap:9px;transition:all .2s;cursor:pointer}
-.btn.primary{background:var(--ink);color:var(--paper)}
-.btn.primary:hover{background:var(--ember);border-color:var(--ember)}
-.btn.ghost:hover{background:var(--ink);color:var(--paper)}
-.btn .arw{font-family:var(--font-mono)}
+/* ===== HERO ===== */
+.hero{position:relative;padding:70px 0;background:#c9ccd1;overflow:hidden}
+.hero .bg{position:absolute;inset:0}
+.hero .bg .ph{width:100%;height:100%;border:0;background:repeating-linear-gradient(135deg,#c2c5ca 0 2px,#ced1d6 2px 14px)}
+.hero .card{position:relative;background:rgba(255,255,255,.9);padding:56px 60px;display:grid;grid-template-columns:1.35fr .65fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(30px,4vw,46px);font-weight:900;color:var(--navy);letter-spacing:.04em}
+.hero .en{font-size:clamp(15px,1.6vw,19px);font-weight:700;letter-spacing:.14em;color:var(--navy);margin-top:8px}
+.hero p{margin-top:30px;font-size:16px;color:var(--navy);line-height:2.1;font-weight:400}
+.hero p+p{margin-top:16px}
+.hero .emblem{display:flex;justify-content:center;align-items:center}
+.hero .emblem svg{width:min(300px,100%);height:auto}
 
-/* ---------- stat strip ---------- */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
-.stats div{padding:30px 28px;border-right:1px solid var(--line)}
-.stats div:last-child{border-right:0}
-.stats .num{font-family:var(--font-disp);font-size:clamp(26px,3.4vw,40px);font-weight:700;color:var(--ink)}
-.stats .num em{font-style:normal;color:var(--ember);font-size:.6em;margin-left:2px}
-.stats .lab{font-size:13px;color:var(--steel);margin-top:4px}
+/* ===== NEWS ===== */
+.news{position:relative;min-height:640px;display:flex;align-items:center;background:#3a3330}
+.news .bg{position:absolute;inset:0}
+.news .bg .ph{width:100%;height:100%;border:0;background:repeating-linear-gradient(135deg,#4a4340 0 2px,#3f3a37 2px 14px);color:#8d8580}
+.news .in{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:64px 0}
+.news h2{font-size:clamp(30px,4vw,46px);font-weight:900;color:#fff;text-align:center;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.doc{background:#fff;padding:44px 48px;box-shadow:0 10px 40px rgba(0,0,0,.35);font-size:14px;line-height:2.1;color:#222}
+.doc .dh{display:flex;align-items:center;gap:10px;padding-bottom:14px;border-bottom:2px solid #c0392b;margin-bottom:26px}
+.doc .dh svg{width:40px;height:40px;flex:none}
+.doc .dh b{font-size:15px;color:#c0392b;font-weight:700;line-height:1.35}
+.doc .dh b span{display:block;font-size:11px;color:#666;font-weight:500}
+.doc h3{text-align:center;font-size:19px;font-weight:700;margin-bottom:22px;letter-spacing:.3em}
+.doc ol{margin:18px 0 0;padding-left:0;list-style:none}
+.doc ol li{margin-bottom:14px;padding-left:34px;text-indent:-34px;font-size:13.5px}
+.doc .sign{text-align:right;margin-top:34px;font-size:13.5px;line-height:2}
+.doc .date{text-align:center;margin-top:24px;letter-spacing:.5em;font-size:13px}
 
-/* ---------- section base ---------- */
-section{padding:88px 0}
-.sechead{max-width:720px;margin-bottom:52px}
-.sechead h2{font-size:clamp(24px,3.4vw,34px);margin-top:16px;font-weight:500}
-.sechead p{color:var(--ink-soft);margin-top:16px;font-weight:300;font-size:16px}
+/* ===== SECTION TITLES ===== */
+.sec{padding:78px 0}
+.stitle{font-size:clamp(30px,4.4vw,50px);font-weight:900;color:var(--navy);text-align:center;letter-spacing:.05em}
 
-/* ---------- about ---------- */
-#about{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:start}
-.about-grid .body p{margin-bottom:20px;color:var(--ink-soft)}
-.exec{border-left:2px solid var(--ember);padding:6px 0 6px 22px;margin-top:30px}
-.exec .q{font-size:17px;color:var(--ink);font-weight:400}
-.exec .who{font-family:var(--font-mono);font-size:13px;color:var(--steel);margin-top:12px;letter-spacing:.04em}
-.mgcard{border:1px solid var(--line);background:var(--paper);padding:0;position:relative;aspect-ratio:1/1.15}
-.mgcard .top{display:flex;justify-content:space-between;padding:18px 20px;font-family:var(--font-mono);font-size:13px;color:var(--steel)}
-.mgcard .sym{position:absolute;top:50%;left:50%;transform:translate(-50%,-54%);font-family:var(--font-disp);font-size:120px;font-weight:700;color:var(--ink)}
-.mgcard .nm{position:absolute;bottom:66px;left:0;right:0;text-align:center;font-family:var(--font-mono);letter-spacing:.3em;font-size:14px;color:var(--ember)}
-.mgcard .props{position:absolute;bottom:0;left:0;right:0;display:flex;border-top:1px solid var(--line)}
-.mgcard .props div{flex:1;padding:12px;text-align:center;font-family:var(--font-mono);font-size:11px;color:var(--steel);border-right:1px solid var(--line)}
-.mgcard .props div:last-child{border-right:0}
-.mgcard .props b{display:block;color:var(--ink);font-size:14px;font-weight:500;margin-bottom:2px}
+/* ===== ABOUT ===== */
+#about{padding-top:60px}
+.about-top{text-align:center;padding-bottom:44px}
+.motto{margin-top:26px;font-size:clamp(19px,2.2vw,26px);color:#2E5C9E;font-weight:400;line-height:2.1}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.about-grid .col{display:grid;gap:14px}
+.about-grid .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.about-grid .ph{aspect-ratio:4/3}
+.about-grid .ph.tall{aspect-ratio:3/4}
+.about-grid .ph.big{aspect-ratio:16/11}
 
-/* ---------- core tech ---------- */
-.core{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
-.core .cell{padding:34px 30px;border-right:1px solid var(--line);position:relative;background:var(--panel);transition:background .25s}
-.core .cell:last-child{border-right:0}
-.core .cell:hover{background:var(--paper)}
-.core .step{font-family:var(--font-mono);font-size:12px;letter-spacing:.2em;color:var(--ember);text-transform:uppercase}
-.core .cell h3{font-size:19px;margin:14px 0 20px;font-weight:500}
-.core ul{list-style:none;display:flex;flex-direction:column;gap:11px}
-.core li{font-size:14.5px;color:var(--ink-soft);padding-left:20px;position:relative}
-.core li::before{content:"";position:absolute;left:0;top:11px;width:8px;height:1px;background:var(--spec)}
+/* ===== ADVANTAGE (鍛造優勢) ===== */
+.adv{display:grid;grid-template-columns:1fr 1.6fr;gap:0;margin-top:14px}
+.adv .left{position:relative;min-height:440px}
+.adv .left .ph{position:absolute;inset:0;border:0}
+.adv .left .cap{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 46px;color:#fff}
+.adv .left .cap h3{font-size:clamp(24px,2.6vw,34px);font-weight:700;line-height:1.5;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.adv .left .cap span{display:block;margin-top:30px;font-size:13px;font-weight:700}
+.adv .right{background:#fff;padding:44px 40px;display:grid;grid-template-columns:1fr auto 1fr;gap:26px;align-items:center}
+.adv .blk h4{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:14px}
+.adv .blk ul{list-style:none;font-size:14.5px;color:#333;line-height:2.1}
+.adv .blk.r{text-align:right}
+.adv .venn{display:flex;align-items:center;justify-content:center}
+.adv .venn svg{width:min(280px,26vw);height:auto}
+.adv .stack{display:grid;gap:34px}
 
-/* ---------- process ---------- */
-#process{background:var(--ink);color:var(--paper)}
-#process .sechead h2{color:var(--paper)}
-#process .sechead p{color:#AEB6BC}
-#process .eyebrow{color:#8FB4C2}
-.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
-.flow .node{padding:28px 20px 26px;border-top:2px solid #33393F;position:relative;transition:border-color .3s}
-.flow .node:hover{border-top-color:var(--ember)}
-.flow .no{font-family:var(--font-disp);font-size:34px;font-weight:700;color:#3D444A;transition:color .3s}
-.flow .node:hover .no{color:var(--ember)}
-.flow h3{font-size:16px;color:var(--paper);margin:8px 0 10px;font-weight:500}
-.flow p{font-size:13px;color:#9BA3A9;line-height:1.6}
+/* ===== CORE STEPS ===== */
+.core{display:grid;gap:18px}
+.step{display:grid;gap:14px;align-items:stretch}
+.step.a{grid-template-columns:.9fr 1.05fr 1.05fr}
+.step.b{grid-template-columns:.75fr .75fr .75fr .95fr}
+.step .txt{background:#fff;padding:44px 38px;display:flex;flex-direction:column;justify-content:center}
+.step .txt h3{font-size:clamp(24px,2.4vw,32px);font-weight:900;color:var(--navy);margin-bottom:26px}
+.step .txt h4{font-size:16px;font-weight:700;color:#333;margin-bottom:14px;padding-left:22px}
+.step .txt ul{list-style:disc;padding-left:44px;font-size:15px;color:#333;line-height:2.2}
+.step .txt ol{padding-left:44px;font-size:15px;color:#333;line-height:2.2}
+.step .ph{min-height:280px}
+.corewrap{background:linear-gradient(180deg,#f7f7f8,#eef0f2);padding:70px 0}
 
-/* ---------- equipment ---------- */
-.equip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.equip .it{border:1px solid var(--line);background:var(--panel);padding:22px 22px;display:flex;align-items:center;gap:16px;transition:all .2s}
-.equip .it:hover{border-color:var(--ink);transform:translateY(-2px)}
-.equip .ic{width:40px;height:40px;flex:none;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:13px;color:var(--spec)}
-.equip .it b{font-weight:500;font-size:15px;display:block}
-.equip .it small{color:var(--steel);font-family:var(--font-mono);font-size:11px;letter-spacing:.03em}
+/* ===== FLOW ===== */
+.flow{position:relative;min-height:440px;display:flex;align-items:center}
+.flow .bg{position:absolute;inset:0}
+.flow .bg .ph{width:100%;height:100%;border:0;background:repeating-linear-gradient(135deg,#57504c 0 2px,#4b4441 2px 14px);color:#9a938e}
+.flow .in{position:relative;width:100%;padding:56px 0}
+.flow h2{font-size:clamp(28px,3.6vw,42px);font-weight:900;color:#fff;margin-bottom:36px;text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.flow .row{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
+.flow .no{font-size:30px;font-weight:900;color:#F2C94C;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+.flow h3{font-size:24px;font-weight:700;color:#fff;margin:6px 0 12px;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.flow .ln{width:76%;height:2px;background:rgba(255,255,255,.75);margin-bottom:14px}
+.flow p{font-size:15px;color:#fff;line-height:1.85;text-shadow:0 1px 6px rgba(0,0,0,.6)}
 
-/* ---------- products ---------- */
-#products{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.prod{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{border:1px solid var(--line);background:var(--paper);overflow:hidden;transition:all .25s;cursor:default}
-.card:hover{border-color:var(--ink);box-shadow:0 12px 30px -18px rgba(0,0,0,.4)}
-.card .ph{aspect-ratio:16/10;background:
-  repeating-linear-gradient(135deg,var(--mist) 0 2px,transparent 2px 11px),var(--paper);
-  display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);position:relative}
-.card .ph span{font-family:var(--font-mono);font-size:11px;color:var(--steel);letter-spacing:.15em;background:var(--paper);padding:4px 10px;border:1px solid var(--line)}
-.card .cap{padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
-.card .cap b{font-weight:500;font-size:15.5px}
-.card .cap em{font-family:var(--font-mono);font-style:normal;font-size:11px;color:var(--ember)}
+/* ===== EQUIPMENT ===== */
+.eq{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+.eq .it .ph{aspect-ratio:1/.86;border:0;background:repeating-linear-gradient(135deg,#f0f0f0 0 2px,#fafafa 2px 12px)}
+.eq .it .lb{background:var(--navy);color:#fff;text-align:center;padding:16px 10px;font-size:15px;font-weight:500;line-height:1.5}
+.videoblock{margin-top:34px}
+.videoblock .ph{aspect-ratio:16/7;border:0;background:repeating-linear-gradient(135deg,#e4e4e4 0 2px,#efefef 2px 12px)}
 
-.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
-.tags span{font-family:var(--font-mono);font-size:13px;color:var(--ink-soft);border:1px solid var(--line);padding:8px 15px;background:var(--panel);transition:all .2s}
-.tags span:hover{border-color:var(--ember);color:var(--ember)}
+/* ===== PRODUCTS ===== */
+.prod{position:relative;padding:70px 0 84px;background:#5b5f66}
+.prod .bg{position:absolute;inset:0}
+.prod .bg .ph{width:100%;height:100%;border:0;background:repeating-linear-gradient(135deg,#61656c 0 2px,#575b62 2px 14px);color:#8e939a}
+.prod .in{position:relative}
+.prod .quote{text-align:center;color:#fff;font-size:16px;margin-bottom:6px;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+.prod .dots{text-align:center;color:#ddd;letter-spacing:.5em;font-size:12px;margin-bottom:20px}
+.prod h2{text-align:center;font-size:clamp(30px,4vw,48px);font-weight:900;color:#C9A9D6;text-shadow:0 2px 14px rgba(0,0,0,.55);margin-bottom:40px}
+.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;max-width:840px;margin:0 auto}
+.pcard{background:#fff;padding:0 0 26px;display:flex;flex-direction:column}
+.pcard .ph{aspect-ratio:1/1;border:0;background:repeating-linear-gradient(135deg,#f0f0f0 0 2px,#fafafa 2px 12px)}
+.pcard .tag{align-self:center;margin:-26px 0 0;background:#fff;border:1px solid #999;padding:9px 26px;font-size:14px;color:#333;position:relative}
+.pcard .nm{text-align:center;margin-top:18px;font-size:16px;color:var(--navy);font-weight:500}
 
-/* ---------- iso + quote band ---------- */
-.band{background:var(--paper);border-top:1px solid var(--line)}
-.band .in{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;padding:56px 0}
-.band .q{font-size:clamp(20px,3vw,28px);font-weight:300;color:var(--ink);line-height:1.5;max-width:720px}
-.band .iso{border:1.5px solid var(--ink);padding:22px 28px;text-align:center;flex:none}
-.band .iso b{font-family:var(--font-disp);font-size:26px;font-weight:700;display:block}
-.band .iso small{font-family:var(--font-mono);font-size:11px;letter-spacing:.15em;color:var(--steel)}
+/* ===== APPLICATIONS ===== */
+.app{position:relative;padding:70px 0 90px;background:#4b5560}
+.app .bg{position:absolute;inset:0}
+.app .bg .ph{width:100%;height:100%;border:0;background:repeating-linear-gradient(135deg,#525c67 0 2px,#48525d 2px 14px);color:#8b949d}
+.app .in{position:relative}
+.app h2{text-align:center;font-size:clamp(28px,3.8vw,44px);font-weight:900;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.6);margin-bottom:44px}
+.arow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;max-width:1020px;margin:0 auto}
+.acell{aspect-ratio:1/1.02;display:flex;align-items:center;justify-content:center;text-align:center;font-size:15.5px;font-weight:700;line-height:1.7;padding:14px}
+.acell:nth-child(1){background:#fff;color:#1a1a1a}
+.acell:nth-child(2){background:#C6C7D0;color:#1a1a1a}
+.acell:nth-child(3){background:#9A9BAF;color:#fff}
+.acell:nth-child(4){background:#4A4E76;color:#fff}
+.acell:nth-child(5){background:#1B2050;color:#fff}
 
-/* ---------- contact ---------- */
-#contact{background:var(--ink);color:var(--paper)}
-#contact .eyebrow{color:#8FB4C2}
-#contact .sechead h2{color:var(--paper)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-.cinfo{display:flex;flex-direction:column;gap:2px}
-.cinfo .row{display:grid;grid-template-columns:120px 1fr;padding:16px 0;border-bottom:1px solid #2C3237;align-items:baseline}
-.cinfo .k{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;color:#8B939A;text-transform:uppercase}
-.cinfo .v{font-size:16px;color:var(--paper)}
-.cinfo .v a:hover{color:var(--ember)}
-.cform{background:#1D2226;border:1px solid #2C3237;padding:30px}
-.cform label{display:block;font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;color:#8B939A;margin:0 0 7px;text-transform:uppercase}
-.cform input,.cform textarea{width:100%;background:#14181B;border:1px solid #333A40;color:var(--paper);padding:11px 13px;font-family:var(--font-body);font-size:15px;margin-bottom:18px;transition:border-color .2s}
-.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--ember)}
-.cform textarea{min-height:96px;resize:vertical}
-.cform button{width:100%;background:var(--ember);color:#fff;border:0;padding:14px;font-family:var(--font-body);font-weight:500;font-size:15px;cursor:pointer;transition:background .2s}
-.cform button:hover{background:var(--ember-deep)}
-.cform .note{font-family:var(--font-mono);font-size:11px;color:#6C747B;margin-top:14px;text-align:center}
+/* ===== ISO ===== */
+.iso{padding:90px 0 100px}
+.iso h2{font-size:clamp(30px,4.2vw,48px);font-weight:900;color:#1a1a1a;text-shadow:0 2px 3px rgba(0,0,0,.18)}
+.iso .cert{margin-top:44px;max-width:560px}
+.iso .cert .ph{aspect-ratio:1/1.35}
 
-/* ---------- footer ---------- */
-footer{background:#0F1214;color:#7C848A;padding:40px 0;font-size:13px}
-footer .fin{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-footer .fbrand{font-family:var(--font-disp);font-weight:700;letter-spacing:.14em;color:#B7BEC3}
-footer a:hover{color:var(--ember)}
+/* ===== TRUST + FOOTER ===== */
+.trust{background:var(--grey-bg);padding:70px 0 64px;text-align:center}
+.trust h2{font-size:clamp(22px,2.8vw,32px);font-weight:900;color:var(--navy)}
+.trust .dash{width:34px;height:2px;background:#666;margin:22px auto 26px}
+.trust p{font-size:15.5px;color:var(--navy);line-height:2.15;max-width:1000px;margin:0 auto}
+.trust .cta{display:inline-block;margin-top:34px;padding:15px 34px}
+footer{background:#fff;padding:26px 24px 34px;text-align:center;font-size:12px;color:#333;line-height:1.75}
+footer .cp{margin-bottom:6px}
+footer .dis{max-width:1180px;margin:0 auto;font-size:11px;color:#444}
 
-/* ---------- reveal ---------- */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1)}
-.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+/* ===== CONTACT ===== */
+#contact{background:var(--navy-deep);color:#fff;padding:78px 0}
+#contact h2{text-align:center;font-size:clamp(26px,3.4vw,38px);font-weight:900;margin-bottom:44px}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.cinfo .row{display:grid;grid-template-columns:110px 1fr;padding:15px 0;border-bottom:1px solid #333c63}
+.cinfo .k{font-size:13px;color:#9aa4c8;letter-spacing:.1em}
+.cinfo .v{font-size:16px}
+.cinfo .v a:hover{color:#E8A9AE}
+.cform{background:#232C52;padding:30px}
+.cform label{display:block;font-size:13px;color:#9aa4c8;margin-bottom:7px}
+.cform input,.cform textarea{width:100%;background:#1A2145;border:1px solid #39406B;color:#fff;padding:12px;font-family:var(--f);font-size:15px;margin-bottom:18px}
+.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--maroon)}
+.cform textarea{min-height:100px;resize:vertical}
+.cform button{width:100%;background:var(--maroon);color:#fff;border:0;padding:15px;font-family:var(--f);font-size:15px;font-weight:500;cursor:pointer}
+.cform button:hover{background:var(--maroon-dark)}
+.cform .note{font-size:12px;color:#7f88ab;margin-top:12px;text-align:center}
 
-/* ---------- responsive ---------- */
-@media(max-width:900px){
-  .menu{position:fixed;inset:70px 0 auto 0;background:var(--paper);flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .3s;align-items:stretch}
-  .menu.open{transform:none}
-  .menu a{padding:14px 28px;border-bottom:1px solid var(--line)}
-  .menu .navcta{margin:12px 28px;text-align:center}
+/* ===== RESPONSIVE ===== */
+@media(max-width:1000px){
+  .menubox{display:none;position:fixed;left:0;right:0;top:96px;flex-direction:column;background:#fff;border:0;border-top:1px solid #eee;padding:0;box-shadow:0 8px 20px rgba(0,0,0,.1)}
+  .menubox.open{display:flex}
+  .menubox a{width:100%;text-align:center;padding:16px;border-bottom:1px solid #f0f0f0}
+  .menubox .more{display:none}
   .burger{display:flex}
-  .about-grid,.contact-grid,.band .in{grid-template-columns:1fr;gap:36px}
-  .core,.flow,.equip,.prod{grid-template-columns:1fr}
-  .core .cell{border-right:0;border-bottom:1px solid var(--line)}
-  .core .cell:last-child{border-bottom:0}
-  .flow .node{border-top:2px solid #33393F}
-  .stats{grid-template-columns:1fr 1fr}
-  .stats div:nth-child(2){border-right:0}
-  .hero .ghost{opacity:.5}
+  .hero .card{grid-template-columns:1fr;padding:36px 26px}
+  .hero .emblem{order:-1}
+  .hero .emblem svg{width:190px}
+  .news .in,.cgrid,.about-grid,.adv{grid-template-columns:1fr}
+  .adv .right{grid-template-columns:1fr;gap:30px}
+  .adv .blk.r{text-align:left}
+  .step.a,.step.b{grid-template-columns:1fr}
+  .flow .row{grid-template-columns:1fr 1fr;gap:30px}
+  .eq{grid-template-columns:1fr 1fr}
+  .pgrid{grid-template-columns:1fr}
+  .arow{grid-template-columns:1fr 1fr}
+  .doc{padding:28px 24px}
 }
 @media(max-width:560px){
-  .equip,.prod{grid-template-columns:1fr}
-  .stats{grid-template-columns:1fr 1fr}
+  .eq,.flow .row,.arow{grid-template-columns:1fr}
+  .nav{height:76px}
+  html{scroll-padding-top:76px}
+  .menubox{top:76px}
 }
 </style>
 </head>
-<body>
+<body id="top">
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="宜德股份有限公司 ADVFORGE 首頁">
-      <div class="mgmark"><span>12</span><b>Mg</b><i>24.3</i></div>
-      <div class="name">ADVFORGE<em>宜德股份有限公司</em></div>
+    <a class="logo" href="#top">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#1c1c1c"/><circle cx="50" cy="50" r="34" fill="#fff"/><path d="M30 32h40v10H58v34H42V42H30z" fill="#c0392b"/><circle cx="50" cy="50" r="46" fill="none" stroke="#c0392b" stroke-width="3"/></svg>
+      </span>
+      <span class="txt"><b id="c-brand">宜德 股份有限公司</b><small id="c-brand-en">ADVFORGE CO.,LTD</small></span>
     </a>
-    <nav class="menu" id="menu">
+    <nav class="menubox" id="menu">
+      <a href="#top">Eng Version</a>
+      <a class="on" href="#top">宜德 股份有限公司</a>
+      <a href="#news">最新消息</a>
       <a href="#about">關於宜德</a>
-      <a href="#core">核心技術</a>
-      <a href="#process">工作流程</a>
-      <a href="#equipment">設備</a>
-      <a href="#products">產品應用</a>
-      <a class="navcta" href="#contact">聯絡專人 →</a>
+      <a href="#adv">鍛造優勢及技術核心</a>
+      <a href="#equip">機器及量測設備</a>
+      <span class="more" aria-hidden="true">›</span>
     </nav>
-    <button class="burger" id="burger" aria-label="開啟選單"><span></span><span></span><span></span></button>
+    <a class="cta" href="#contact">聯絡專人&gt;</a>
+    <button class="burger" id="burger" aria-label="選單"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="ghost" aria-hidden="true">Mg</div>
-    <div class="wrap inner">
-      <span class="eyebrow" id="c-hero-eyebrow">Magnesium Alloy Forging · Est. 2023</span>
-      <h1><span id="c-hero-t1">鎂合金鍛造</span><br><span id="c-hero-t2">與 CNC 精密加工</span>
-        <span class="en" id="c-hero-en">ADVFORGE CO., LTD.</span>
-      </h1>
-      <p class="lede" id="c-hero-lede">整合輕合金鍛造與 CNC 加工技術，從研發設計、模擬、開發到製造加工，一條龍製程服務，為醫療、航太、汽車產業打造輕量化、高強度的金屬零件。</p>
-      <div class="tagline">
-        <span id="c-tag-0">成就自己</span><span id="c-tag-1">利益眾生</span><span id="c-tag-2">共創雙贏</span>
+<!-- HERO -->
+<section class="hero">
+  <div class="bg" aria-hidden="true"><div class="ph">背景圖：鎂合金鍛件排列（原站主視覺）</div></div>
+  <div class="wrap">
+    <div class="card">
+      <div>
+        <h1 id="c-h1">宜德 股份有限公司</h1>
+        <div class="en" id="c-h1en">ADVFORGE CO.,LTD</div>
+        <p id="c-hero-p1">宜德 創立於2023年，經營團隊具有20年鎂合金、鎂鋰合金(LZ-91)、鋁合金鍛造及CNC加工技術經驗。初期以代工生產為主，現主要從事醫療.航太.汽機車零配件加工製品及各類板金五金產品。</p>
+        <p id="c-hero-p2">工廠整合CNC加工及輕合金鍛造技術，從研發設計、模擬、開發到製造加工，製程一條龍的服務，更能確保產品品質完善，同時替客戶有效節省時間成本。</p>
+        <p id="c-hero-p3">領先的鍛造技術及鎂合金環保材料應用，散熱快、輕量化及高強度合金節省能源，將利益眾生、造福人群，並秉持追求卓越、永續經營的理念與致力於提供客戶信賴的產品服務及品質。</p>
       </div>
-      <div class="actions">
-        <a class="btn primary" href="#contact">聯絡我們 <span class="arw">→</span></a>
-        <a class="btn ghost" href="#core">了解技術</a>
+      <div class="emblem" aria-hidden="true">
+        <svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="92" fill="#1c1c1c"/><circle cx="100" cy="100" r="66" fill="#f2f2f2"/><circle cx="100" cy="100" r="92" fill="none" stroke="#c0392b" stroke-width="5"/><path d="M62 66h76v20h-26v70H88V86H62z" fill="#c0392b"/><circle cx="100" cy="100" r="30" fill="none" stroke="#1c1c1c" stroke-width="3"/></svg>
       </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <div class="stats wrap" style="max-width:1180px">
-    <div><div class="num">20<em>yr</em></div><div class="lab">合金鍛造技術經驗</div></div>
-    <div><div class="num">1.74<em>g/cm³</em></div><div class="lab">鎂合金極低密度</div></div>
-    <div><div class="num">3<em>大</em></div><div class="lab">醫療 · 航太 · 汽車</div></div>
-    <div><div class="num">ISO<em>9001</em></div><div class="lab">品質管理系統認證</div></div>
-  </div>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="wrap">
-      <div class="about-grid reveal">
-        <div class="body">
-          <span class="eyebrow">關於宜德 / About Us</span>
-          <h2 style="font-size:clamp(24px,3.4vw,32px);margin:16px 0 26px;font-weight:500" id="c-about-h">成就自己，利益眾生，共創雙贏</h2>
-          <p id="c-about-p1">宜德創立於 2023 年，經營團隊具有 20 年鎂合金、鎂鋰合金（LZ-91）、鋁合金鍛造及 CNC 加工技術經驗。初期以代工生產為主，現主要從事醫療、航太、汽機車零配件加工製品及各類板金五金產品。</p>
-          <p>工廠整合 CNC 加工及輕合金鍛造技術，從研發設計、模擬、開發到製造加工，製程一條龍的服務，更能確保產品品質完善，同時替客戶有效節省時間成本。2024 年宜德導入鎂合金、鋁合金鍛造及 CNC 加工技術，並結合元創集團車用設計、開發、製造加工，提供一條龍產品服務。</p>
-          <div class="exec">
-            <div class="q" id="c-exec-q">「領先的鍛造技術及鎂合金環保材料應用，散熱快、輕量化及高強度合金節省能源，秉持追求卓越、永續經營的理念，致力於提供客戶信賴的產品服務及品質。」</div>
-            <div class="who" id="c-exec-who">總經理 · 謝馨毅</div>
-          </div>
-        </div>
-        <div class="mgcard" aria-hidden="true">
-          <div class="top"><span>12</span><span>24.305</span></div>
-          <div class="sym">Mg</div>
-          <div class="nm">MAGNESIUM</div>
-          <div class="props">
-            <div><b>1.74</b>g/cm³</div>
-            <div><b>650°C</b>熔點</div>
-            <div><b>HCP</b>晶格</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CORE TECH -->
-  <section id="core">
-    <div class="wrap">
-      <div class="sechead reveal">
-        <span class="eyebrow">核心技術 / Core Technology</span>
-        <h2>從模擬設計到恆溫加工的三段製程</h2>
-        <p>以模擬驅動設計、以密閉模穴鍛造成形、以恆溫水冷 CNC 收尾，確保每一件產品的精密度與穩定性。</p>
-      </div>
-      <div class="core reveal">
-        <div class="cell">
-          <div class="step">Step 01</div>
-          <h3>材料成型模擬設計（CAE）</h3>
-          <ul>
-            <li>一次鍛成形設計，效率高</li>
-            <li>密閉模穴設計，節省材料</li>
-            <li>鍛造產品質穩定性高</li>
-            <li>恆溫模具，生產穩定度高</li>
-          </ul>
-        </div>
-        <div class="cell">
-          <div class="step">Step 02</div>
-          <h3>精密鍛造模具設計及生產</h3>
-          <ul>
-            <li>變壓鍛造，高流動性</li>
-            <li>產品成形精密度高</li>
-            <li>鍛造後產品變形量少</li>
-            <li>低噪音、低震動，穩定性高</li>
-          </ul>
-        </div>
-        <div class="cell">
-          <div class="step">Step 03</div>
-          <h3>精密恆溫水冷 CNC 加工</h3>
-          <ul>
-            <li>產品不易氧化</li>
-            <li>生產品質穩定</li>
-            <li>加工熱變形小</li>
-            <li>微米級尺寸精度</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section id="process">
-    <div class="wrap">
-      <div class="sechead reveal">
-        <span class="eyebrow">工作流程 / Workflow</span>
-        <h2>五道工序，環環驗證</h2>
-      </div>
-      <div class="flow reveal">
-        <div class="node"><div class="no">01</div><h3>模擬鍛胚成形</h3><p>胚料選用、鍛壓噸數評估</p></div>
-        <div class="node"><div class="no">02</div><h3>模具設計試驗</h3><p>試驗模 / 量產模、模具製作</p></div>
-        <div class="node"><div class="no">03</div><h3>鍛造加工驗證</h3><p>模具修改、鍛造條件調校</p></div>
-        <div class="node"><div class="no">04</div><h3>機械加工</h3><p>圖面最終尺寸加工</p></div>
-        <div class="node"><div class="no">05</div><h3>表面處理</h3><p>各種表面處理製程</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EQUIPMENT -->
-  <section id="equipment">
-    <div class="wrap">
-      <div class="sechead reveal">
-        <span class="eyebrow">機器及量測設備 / Equipment</span>
-        <h2>鍛造、加工、檢測一應俱全</h2>
-      </div>
-      <div class="equip reveal">
-        <div class="it"><div class="ic">爐</div><div><b>鎂合金鍛造加熱爐</b><small>Forging Furnace</small></div></div>
-        <div class="it"><div class="ic">銑</div><div><b>AKIRA SEIKI PC1000</b><small>CNC Machining Center</small></div></div>
-        <div class="it"><div class="ic">鑽</div><div><b>HSC 高速鑽洗加工機</b><small>High-Speed Milling</small></div></div>
-        <div class="it"><div class="ic">鍛</div><div><b>Forging Machines 1100</b><small>Forging Press</small></div></div>
-        <div class="it"><div class="ic">量</div><div><b>三次元檢測儀</b><small>CMM Metrology</small></div></div>
-        <div class="it"><div class="ic">雷</div><div><b>Metra Scan 3D</b><small>Laser Scanning</small></div></div>
-        <div class="it"><div class="ic">刻</div><div><b>鐳雕機</b><small>Laser Marking</small></div></div>
-        <div class="it"><div class="ic">壓</div><div><b>廢料壓縮機</b><small>Scrap Compactor</small></div></div>
-        <div class="it"><div class="ic">檢</div><div><b>自動檢測系統</b><small>Automated Inspection</small></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section id="products">
-    <div class="wrap">
-      <div class="sechead reveal">
-        <span class="eyebrow">運用的產品 / Applications</span>
-        <h2>匯聚二十年經驗，打造高品質零件</h2>
-        <p>從醫療影像設備到航太結構件，鎂合金鍛件已實際運用於多個高規格產業。</p>
-      </div>
-      <div class="prod reveal">
-        <div class="card"><div class="ph"><span>PRODUCT PHOTO</span></div><div class="cap"><b>穿戴式外骨骼</b><em>Mg</em></div></div>
-        <div class="card"><div class="ph"><span>PRODUCT PHOTO</span></div><div class="cap"><b>輕量化無人直升機轉軸</b><em>Mg</em></div></div>
-        <div class="card"><div class="ph"><span>PRODUCT PHOTO</span></div><div class="cap"><b>攜帶式 X 光機</b><em>Mg</em></div></div>
-        <div class="card"><div class="ph"><span>PRODUCT PHOTO</span></div><div class="cap"><b>車用卡鉗</b><em>Mg</em></div></div>
-        <div class="card"><div class="ph"><span>PRODUCT PHOTO</span></div><div class="cap"><b>鎂合金輪圈</b><em>Mg</em></div></div>
-        <div class="card"><div class="ph"><span>PRODUCT PHOTO</span></div><div class="cap"><b>高階繪圖機機殼</b><em>Mg</em></div></div>
-      </div>
-      <div class="tags reveal">
-        <span>電動車零配件</span><span>天線 / 馬達模組</span><span>高效能散熱外殼</span>
-        <span>機構零配件</span><span>超音波零件模組</span><span>眼鏡 / 夜視鏡鏡框</span><span>輕量化無人機零組件</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- QUOTE + ISO -->
-  <div class="band">
-    <div class="wrap in reveal">
-      <div class="q">「宜德鎂合金鍛造，長久以來受到客戶的信賴。」通過 ISO 9001，建立潛在客戶對標準化系統與流程能力的信任。</div>
-      <div class="iso"><b>ISO</b><small>9001 : 2015</small></div>
     </div>
   </div>
+</section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="wrap">
-      <div class="sechead reveal">
-        <span class="eyebrow">聯絡專人 / Contact</span>
-        <h2>談談您的專案需求</h2>
+<!-- NEWS -->
+<section class="news" id="news">
+  <div class="bg" aria-hidden="true"><div class="ph">背景圖：鍛造鐵鎚與熾熱鐵件</div></div>
+  <div class="wrap in">
+    <h2 id="c-news-title">最新消息</h2>
+    <div class="doc">
+      <div class="dh">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="#1c1c1c"/><circle cx="50" cy="50" r="34" fill="#fff"/><path d="M30 32h40v10H58v34H42V42H30z" fill="#c0392b"/></svg>
+        <b>宜德 股份有限公司<span>ADVFORGE Co., LTD</span></b>
       </div>
-      <div class="contact-grid reveal">
-        <div class="cinfo">
-          <div class="row"><div class="k">公司</div><div class="v" id="c-c-company">宜德股份有限公司 ADVFORGE CO., LTD.</div></div>
-          <div class="row"><div class="k">電話</div><div class="v"><a id="c-c-phone" href="tel:+88634805600">03-4805600</a> <span style="color:#8B939A;font-size:13px">（代表機）</span></div></div>
-          <div class="row"><div class="k">傳真</div><div class="v" id="c-c-fax">03-4805601</div></div>
-          <div class="row"><div class="k">Email</div><div class="v"><a id="c-c-email" href="mailto:lulu@advforge.com">lulu@advforge.com</a></div></div>
-          <div class="row"><div class="k">統一編號</div><div class="v" id="c-c-taxid">94234797</div></div>
-          <div class="row"><div class="k">地址</div><div class="v" id="c-c-address">325009 桃園市龍潭區中興路九龍段 50 巷 51 號</div></div>
+      <h3>聲明稿</h3>
+      <p>　　茲聲明本公司總經理謝馨毅先生僅任職於宜德股份有限公司，為確保本公司與總經理謝馨毅先生應有之權益，爰聲明如后：</p>
+      <ol>
+        <li>（1）第三人不得以本公司或總經理謝馨毅先生名義對外洽談招攬任何業務，概與本公司無涉，如有任何疑問，請與本公司或總經理謝馨毅先生本人確認，以杜爭議，特此聲明。</li>
+        <li>（2）倘有不肖人士以本公司或總經理謝馨毅先生名義對外洽談招攬任何業務之情形而發生任何爭議糾紛，相關法律責任概由其自行負責。</li>
+        <li>（3）特此聲明如上，以昭公信，感謝您的支持與愛護。</li>
+      </ol>
+      <div class="sign">宜德股份有限公司<br>總經理　謝馨毅</div>
+      <div class="date">中華民國 114 年 1 月 8 日</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="about-top">
+      <h2 class="stitle" id="c-about-title">關於宜德</h2>
+      <div class="motto" id="c-motto">成就自已<br>利益眾生<br>共創雙贏</div>
+    </div>
+    <div class="about-grid">
+      <div class="col">
+        <div class="ph big">照片：公司大廳／世界地圖牆</div>
+        <div class="g2">
+          <div class="ph">照片：辦公休憩區</div>
+          <div class="ph">照片：辦公區座位</div>
         </div>
-        <form class="cform" onsubmit="event.preventDefault();this.querySelector('.note').textContent='表單尚未接上寄信服務 — 上線前會以 Formspree 串接。'">
-          <label for="nm">姓名 / 公司</label>
-          <input id="nm" type="text" placeholder="您的姓名與公司名稱">
-          <label for="em">Email</label>
-          <input id="em" type="email" placeholder="name@company.com">
-          <label for="ms">需求說明</label>
-          <textarea id="ms" placeholder="請簡述您的零件需求、材料與數量"></textarea>
-          <button type="submit">送出詢問</button>
-          <div class="note">送出後將由專人與您聯繫</div>
-        </form>
+        <div class="g2">
+          <div class="ph">照片：宜德玻璃門招牌</div>
+          <div class="ph tall">照片：辦公室走廊入口</div>
+        </div>
+        <div class="ph big">照片：廠房外觀（藍天）</div>
+      </div>
+      <div class="col">
+        <div class="ph big">照片：公司建築外觀</div>
+        <div class="ph big">照片：廠區前庭停車場</div>
+        <div class="ph big">照片：廠房與彩虹</div>
+        <div class="g2">
+          <div class="ph">照片：鍛造廠房外觀</div>
+          <div class="ph">照片：廠區停車場</div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-</main>
+<!-- ADVANTAGE -->
+<section id="adv">
+  <div class="wrap">
+    <div class="adv">
+      <div class="left">
+        <div class="ph" aria-hidden="true">照片：CNC 水冷加工特寫</div>
+        <div class="cap">
+          <h3 id="c-adv-title">鎂.鋁.鋰合金鍛造<br>及沖壓技術優勢</h3>
+          <span>Read More</span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="stack">
+          <div class="blk">
+            <h4>鍛造模具設計優勢</h4>
+            <ul><li>一次鍛成形設計效率高</li><li>密閉模穴設計節省材料</li><li>鍛造產品質穩定性高</li><li>恆溫模具生產穩定度高</li></ul>
+          </div>
+          <div class="blk">
+            <h4>鍛造設計模擬CAE優勢</h4>
+            <ul><li>縮短模具製造時間</li><li>提高試模成功機率</li><li>精準估算材料用量</li><li>精確計算成型壓力</li><li>預防產品內部缺陷</li></ul>
+          </div>
+        </div>
+        <div class="venn" aria-hidden="true">
+          <svg viewBox="0 0 240 240">
+            <circle cx="105" cy="78" r="52" fill="#E8447F" opacity=".92"/>
+            <circle cx="160" cy="120" r="46" fill="#5B3E96" opacity=".92"/>
+            <circle cx="88" cy="150" r="50" fill="#5B3E96" opacity=".92"/>
+            <circle cx="145" cy="178" r="42" fill="#E8447F" opacity=".92"/>
+            <circle cx="122" cy="128" r="20" fill="#fff"/>
+            <text x="105" y="74" text-anchor="middle" fill="#fff" font-size="15" font-family="sans-serif" font-weight="600">Mold</text>
+            <text x="105" y="92" text-anchor="middle" fill="#fff" font-size="15" font-family="sans-serif" font-weight="600">designe</text>
+            <text x="168" y="126" text-anchor="middle" fill="#fff" font-size="15" font-family="sans-serif" font-weight="600">Forging</text>
+            <text x="76" y="146" text-anchor="middle" fill="#fff" font-size="13" font-family="sans-serif" font-weight="600">Forging</text>
+            <text x="76" y="162" text-anchor="middle" fill="#fff" font-size="13" font-family="sans-serif" font-weight="600">simulation</text>
+            <text x="148" y="186" text-anchor="middle" fill="#fff" font-size="15" font-family="sans-serif" font-weight="600">CNC</text>
+          </svg>
+        </div>
+        <div class="stack">
+          <div class="blk r">
+            <h4>精密伺服液壓鍛造設備優勢</h4>
+            <ul><li>變壓鍛造高流動性</li><li>產品成形精密度高</li><li>鍛造後產品變形量小</li><li>低噪音低震動穩定性高</li></ul>
+          </div>
+          <div class="blk r">
+            <h4>恆溫水冷防火CNC設備優勢</h4>
+            <ul><li>產品不易氧化</li><li>加工不易起火</li><li>生產品質穩定</li><li>加工熱變形小</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE TECHNOLOGY -->
+<div class="corewrap">
+  <div class="wrap core">
+    <div class="step a">
+      <div class="txt">
+        <h3>核心技術 Step1</h3>
+        <h4>材料成型模擬設計(CAE)</h4>
+        <ul><li>一次鍛成形設計效率高</li><li>密閉模穴設計節省材料</li><li>鍛造產品質穩定性高</li><li>恆溫模具生產穩定度高</li></ul>
+      </div>
+      <div class="ph">影片／圖：CAE 應力模擬分析</div>
+      <div class="ph">圖：鍛件應力雲圖（Step 231）</div>
+    </div>
+
+    <div class="step b">
+      <div class="ph">影片：模具內鍛件成形</div>
+      <div class="ph">照片：鍛造模具設備</div>
+      <div class="ph">照片：液壓鍛造機運轉</div>
+      <div class="txt">
+        <h3>核心技術 Step2</h3>
+        <h4>精密鍛造模具設計及鍛造生產</h4>
+        <ul><li>變壓鍛造高流動性</li><li>產品成形精密度高</li><li>鍛造後產品變形量少</li><li>低噪音低震動穩定性高</li></ul>
+      </div>
+    </div>
+
+    <div class="step a">
+      <div class="txt">
+        <h3>核心技術 Step3</h3>
+        <h4>精密恆溫水冷CNC加工</h4>
+        <ul><li>產品不易氧化</li><li>生產品質穩定</li><li>加工熱變形小</li></ul>
+      </div>
+      <div class="ph">照片：鎂合金輪圈 CNC 加工件</div>
+      <div class="ph">照片：CNC 水冷加工中</div>
+    </div>
+
+    <div class="step b">
+      <div class="ph">照片：鍛造作業現場</div>
+      <div class="ph">影片：鍛件取出</div>
+      <div class="ph">照片：19" Mg Alloy 3.8Kg 輪圈</div>
+      <div class="txt">
+        <h3>加工範例影片</h3>
+        <ol><li>大花鼓鍛造影片</li><li>大花鼓第二道鍛造影片</li><li>輪框鍛造影片</li><li>筆電機殼鍛造影片</li><li>X光機面板鍛造影片</li></ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WORKFLOW -->
+<section class="flow">
+  <div class="bg" aria-hidden="true"><div class="ph">背景圖：鍛造熱鐵與鐵鉗</div></div>
+  <div class="wrap in">
+    <h2>工作流程</h2>
+    <div class="row">
+      <div><div class="no">01.</div><h3>模擬</h3><div class="ln"></div><p>鍛胚成形<br>胚料選用<br>鍛壓噸數</p></div>
+      <div><div class="no">02.</div><h3>模具設計</h3><div class="ln"></div><p>試驗／量產模<br>模具製作</p></div>
+      <div><div class="no">03.</div><h3>鍛造加工</h3><div class="ln"></div><p>模擬驗證<br>模具修改<br>鍛造條件</p></div>
+      <div><div class="no">04.</div><h3>機械加工</h3><div class="ln"></div><p>圖面最終<br>尺寸加工</p></div>
+      <div><div class="no">05.</div><h3>表面處理</h3><div class="ln"></div><p>各種表面處理</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPMENT -->
+<section class="sec" id="equip">
+  <div class="wrap">
+    <h2 class="stitle">機器&amp;量測設備</h2>
+    <div class="eq">
+      <div class="it"><div class="ph">照片：鎂合金鍛造加熱爐</div><div class="lb">鎂合金鍛造加熱爐</div></div>
+      <div class="it"><div class="ph">照片：AKIRA SEIKI PC1000HSC</div><div class="lb">AKIRA SEIKI PC1000HSC_高速鑽洗加工機</div></div>
+      <div class="it"><div class="ph">照片：Forging machines 1100</div><div class="lb">Forging machines 1100</div></div>
+      <div class="it"><div class="ph">照片：三次元檢測儀</div><div class="lb">三次元檢測儀</div></div>
+      <div class="it"><div class="ph">照片：鐳雕機</div><div class="lb">鐳雕機</div></div>
+      <div class="it"><div class="ph">照片：廢料壓縮機</div><div class="lb">廢料壓縮機</div></div>
+      <div class="it"><div class="ph">照片：自動檢測</div><div class="lb">自動檢測</div></div>
+      <div class="it"><div class="ph">照片：Metra Scan 3D</div><div class="lb">Metra Scan 3D_雷射掃描量測</div></div>
+    </div>
+    <div class="videoblock">
+      <div class="ph">影片：MetraSCAN 3D量測級掃描_介紹影片</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="prod" id="products">
+  <div class="bg" aria-hidden="true"><div class="ph">背景圖：VR 頭戴裝置使用者</div></div>
+  <div class="wrap in">
+    <div class="quote">&quot;匯聚二十年經驗，打造醫療、航太、汽車產業的高品質零件。&quot;</div>
+    <div class="dots">• • •</div>
+    <h2>運用的產品</h2>
+    <div class="pgrid">
+      <div class="pcard"><div class="ph">照片：穿戴式外骨骼</div><div class="tag">鎂合金</div><div class="nm">穿戴式外骨骼</div></div>
+      <div class="pcard"><div class="ph">照片：攜帶式X光機</div><div class="tag">鎂合金</div><div class="nm">攜帶式X光機</div></div>
+      <div class="pcard"><div class="ph">照片：鎂合金輪圈</div><div class="tag">鎂合金</div><div class="nm">鎂合金輪圈</div></div>
+      <div class="pcard"><div class="ph">照片：輕量化無人直升機轉軸</div><div class="tag">鎂合金</div><div class="nm">輕量化無人直升機轉軸</div></div>
+      <div class="pcard"><div class="ph">照片：車用卡鉗</div><div class="tag">鎂合金</div><div class="nm">車用卡鉗</div></div>
+      <div class="pcard"><div class="ph">照片：高階繪圖機機殼</div><div class="tag">鎂合金</div><div class="nm">高階繪圖機機殼</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="app">
+  <div class="bg" aria-hidden="true"><div class="ph">背景圖：工廠產線</div></div>
+  <div class="wrap in">
+    <h2>可開發應用相關產品</h2>
+    <div class="arow">
+      <div class="acell">電動車零配件<br>天線/馬達模組</div>
+      <div class="acell">高效能散熱外殼<br>機構零配件</div>
+      <div class="acell">超音波<br>零件模組</div>
+      <div class="acell">眼鏡/夜視鏡<br>鏡框</div>
+      <div class="acell">輕量化無人機<br>零組件</div>
+    </div>
+  </div>
+</section>
+
+<!-- ISO -->
+<section class="iso">
+  <div class="wrap">
+    <h2>ISO 9001:2015 證書</h2>
+    <div class="cert"><div class="ph">圖：ISO 9001:2015 證書</div></div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="wrap">
+    <h2 id="c-trust-h">宜德 鎂合金鍛造長久以來受到客戶的信賴</h2>
+    <div class="dash"></div>
+    <p id="c-trust-p1">宜德 創立於2023年，初期以代工生產為主，現主要從事醫療.航太.汽機車零配件加工製品及各類板金五金產品，秉持追求卓越、永續經營的理念與致力於提供客戶信賴的產品服務和品質。</p>
+    <p id="c-trust-p2">2024年宜德 將導入鎂合金、鋁合金鍛造及CNC加工技術，並結合於元創集團車用設計、開發、製造加工，一條龍產品服務，不僅能確保完善的品質，同時也替客戶節省時間與成本。</p>
+    <p id="c-trust-p3">通過ISO 9001:建立潛在客戶對我司標準化系統以及流程能力的信任。</p>
+    <a class="cta" href="#contact">聯絡專人&gt;</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <h2>聯絡專人</h2>
+    <div class="cgrid">
+      <div class="cinfo">
+        <div class="row"><div class="k">公司</div><div class="v" id="c-company">宜德股份有限公司 ADVFORGE CO.,LTD</div></div>
+        <div class="row"><div class="k">電話</div><div class="v"><a id="c-phone" href="tel:0334805600">03-4805600</a></div></div>
+        <div class="row"><div class="k">傳真</div><div class="v" id="c-fax">03-4805601</div></div>
+        <div class="row"><div class="k">Email</div><div class="v"><a id="c-email" href="mailto:lulu@advforge.com">lulu@advforge.com</a></div></div>
+        <div class="row"><div class="k">統一編號</div><div class="v" id="c-taxid">94234797</div></div>
+        <div class="row"><div class="k">地址</div><div class="v" id="c-address">325009 桃園市龍潭區中興路九龍段 50 巷 51 號</div></div>
+      </div>
+      <form class="cform" onsubmit="event.preventDefault();this.querySelector('.note').textContent='表單尚未接上寄信服務，上線前會以 Formspree 串接。'">
+        <label for="f1">姓名／公司</label>
+        <input id="f1" type="text" placeholder="您的姓名與公司名稱">
+        <label for="f2">Email</label>
+        <input id="f2" type="email" placeholder="name@company.com">
+        <label for="f3">需求說明</label>
+        <textarea id="f3" placeholder="請簡述您的零件需求、材料與數量"></textarea>
+        <button type="submit">送出詢問</button>
+        <div class="note">送出後將由專人與您聯繫</div>
+      </form>
+    </div>
+  </div>
+</section>
 
 <footer>
-  <div class="wrap fin">
-    <div class="fbrand">ADVFORGE</div>
-    <div>© 2024 宜德股份有限公司 ADVFORGE CO., LTD. · 統編 94234797</div>
-    <div><a href="#top">回到頂端 ↑</a></div>
-  </div>
+  <div class="cp">© 2024 ADVFORGE CO., LTD.</div>
+  <div class="dis"><b>Disclaimer:</b><br>
+  While we have made every attempt to ensure that the information contained on this site has been obtained from reliable sources, ADVFORGE CO.,LTD is not responsible for any errors or omissions, or for the results obtained from the use of this information. All information on this site is provided "as is", with no guarantee of completeness, accuracy, timeliness or of the results obtained from the use of this information, and without warranty of any kind, express or implied, including, but not limited to warranties of performance, merchantability and fitness for a particular purpose. In no event will ADVFORGE CO.,LTD, its related partnerships or corporations, or the partners, agents or employees thereof be liable to you or anyone else for any decision made or action taken in reliance on the information on this site or for any consequential, special or similar damages, even if advised of the possibility of such damages.</div>
 </footer>
 
 <script>
-const burger=document.getElementById('burger'),menu=document.getElementById('menu');
-burger.addEventListener('click',()=>menu.classList.toggle('open'));
-menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
-
-const io=new IntersectionObserver((es)=>{
-  es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
-},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',()=>m.classList.toggle('open'));
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>m.classList.remove('open')));
 
 async function loadContent(){
   try{
     const r=await fetch('content/site.json',{cache:'no-store'});
     if(!r.ok)return;
     const d=await r.json();
-    const set=(id,v)=>{const e=document.getElementById(id);if(e&&v!=null)e.textContent=v;};
-    if(d.hero){set('c-hero-eyebrow',d.hero.eyebrow);set('c-hero-t1',d.hero.title_line1);set('c-hero-t2',d.hero.title_line2);set('c-hero-en',d.hero.en);set('c-hero-lede',d.hero.lede);(d.hero.tagline||[]).forEach((t,i)=>set('c-tag-'+i,t));}
-    if(d.about){set('c-about-h',d.about.heading);set('c-about-p1',d.about.p1);set('c-about-p2',d.about.p2);set('c-exec-q',d.about.exec_quote);set('c-exec-who',d.about.exec_name);}
-    if(d.contact){set('c-c-company',d.contact.company);set('c-c-fax',d.contact.fax);set('c-c-taxid',d.contact.taxid);set('c-c-address',d.contact.address);
-      const ph=document.getElementById('c-c-phone');if(ph&&d.contact.phone){ph.textContent=d.contact.phone;ph.href='tel:'+d.contact.phone.replace(/[^0-9]/g,'');}
-      const em=document.getElementById('c-c-email');if(em&&d.contact.email){em.textContent=d.contact.email;em.href='mailto:'+d.contact.email;}
+    const s=(id,v)=>{const e=document.getElementById(id);if(e&&v!=null)e.textContent=v;};
+    if(d.hero){s('c-h1',d.hero.title);s('c-h1en',d.hero.title_en);s('c-hero-p1',d.hero.p1);s('c-hero-p2',d.hero.p2);s('c-hero-p3',d.hero.p3);}
+    if(d.about){s('c-about-title',d.about.title);const e=document.getElementById('c-motto');if(e&&d.about.motto)e.innerHTML=d.about.motto.split('\n').join('<br>');}
+    if(d.trust){s('c-trust-h',d.trust.heading);s('c-trust-p1',d.trust.p1);s('c-trust-p2',d.trust.p2);s('c-trust-p3',d.trust.p3);}
+    if(d.contact){s('c-company',d.contact.company);s('c-fax',d.contact.fax);s('c-taxid',d.contact.taxid);s('c-address',d.contact.address);
+      const p=document.getElementById('c-phone');if(p&&d.contact.phone){p.textContent=d.contact.phone;p.href='tel:'+d.contact.phone.replace(/[^0-9]/g,'');}
+      const em=document.getElementById('c-email');if(em&&d.contact.email){em.textContent=d.contact.email;em.href='mailto:'+d.contact.email;}
     }
   }catch(e){}
 }
